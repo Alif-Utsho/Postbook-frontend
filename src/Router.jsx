@@ -19,6 +19,7 @@ import Reports from './Pages/Admin/Reports'
 
 function Router() {
 
+    axios.defaults.baseURL = 'https://poostbook.herokuapp.com';
     axios.defaults.headers.common['token'] = localStorage.getItem('token')
 
     axios.interceptors.request.use(function (config) {
